@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="three-column-layout">
+  <h3 class="ingredients-header">Ingredients</h3>
+  <h3 class="instructions-header">Instructions</h3>
+  {{ range .Params.ingredients }}
+    <div class="step">
+      <div class="step-number">
+        <div class="circle">{{ .step }}</div>
+      </div>
+      <div class="ingredient-column" {{ if not .ingredients }}style="display: none;"{{ end }}>
+        {{ if .ingredients }}
+          <ul class="no-bullet">
+            {{ range .ingredients }}
+            <li><span class="quantity">{{ .quantity }}</span> <span class="name">{{ .name }}</span></li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+      <div class="instruction-column" {{ if not .ingredients }}style="width: 66%;"{{ end }}>
+        <ul class="no-bullet">
+          {{ range .instructions }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    <hr>
+  {{ end }}
+</div>
+{{ end }}

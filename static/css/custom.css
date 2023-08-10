@@ -1,0 +1,70 @@
+:root {
+  --ingredient-quantity-column-width: 70px; /* You can adjust this value */
+}
+
+
+.three-column-layout .step {
+  display: flex;
+  align-items: flex-start;
+}
+
+.step-number .circle {
+  width: 30px;
+  height: 30px;
+  background-color: darkgreen;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 15px;
+}
+
+
+
+.ingredients-header, .instructions-header {
+  text-align: center;
+}
+
+.ingredient-column {
+  width: 33%;
+  padding: 10px;
+}
+
+.instruction-column {
+  width: 52%;
+  padding: 10px;
+}
+
+ul.no-bullet {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.quantity {
+  display: inline-block;
+  width: var(--ingredient-quantity-column-width);
+}
+
+.name {
+  display: inline-block;
+  margin-left: var(--ingredient-quantity-column-width);
+  margin-right: calc(-1 * var(--ingredient-quantity-column-width) - .2em);
+  min-width: var(--ingredient-quantity-column-width);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .three-column-layout .step {
+    flex-direction: column;
+  }
+
+  .ingredient-column, .instruction-column {
+    width: 100%;
+    text-align: left;
+  }
+
+  .step-number {
+    text-align: center;
+    margin-left: 5px;
+  }
+}

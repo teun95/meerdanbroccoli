@@ -1,0 +1,11 @@
+baseURL = 'http://examplegsfdg.org/'
+languageCode = 'en-us'
+title = 'Meer Dan Broccoli'
+theme = 'beautifulhugo'
+
+
+[permalinks]
+  posts = "/posts/:filename/"
+
+[params]
+    custom_css = ["css/custom.css"]
