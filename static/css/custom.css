@@ -1,5 +1,10 @@
 :root {
   --ingredient-quantity-column-width: 70px; /* You can adjust this value */
+  --body-text-size: 15px;
+}
+
+body {
+  font-size: var(--body-text-size) !important;
 }
 
 
@@ -66,5 +71,11 @@ ul.no-bullet {
   .step-number {
     text-align: center;
     margin-left: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1487px !important; /* body width for larger devices */
   }
 }

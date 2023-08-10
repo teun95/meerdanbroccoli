@@ -1,5 +1,6 @@
 ---
 title: Quinoa bowl with peanut sauce
+categories: ["recipe"]
 ingredients:
   - step: 1
     ingredients:
