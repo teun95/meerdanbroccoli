@@ -115,5 +115,37 @@ ul.subtle-bullet li:not(:only-child)::before {
 }
 
 .excerpt {
-  font-style: italic; /* Make the text italic */
+  margin-top: 15px;
 }
+
+.recipe-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px; /* Adjust this value as needed for a reasonable maximum */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.recipe-item {
+  text-align: center;
+  padding: 0 10px;
+  border-right: 1px solid #000;
+  flex-grow: 1;
+}
+
+.recipe-item:last-child {
+  border-right: none;
+}
+
+.recipe-label, .value {
+  display: block;
+}
+
+/* Responsive design for mobile devices or small screens */
+@media (max-width: 768px) {
+  .recipe-info {
+    width: 100%;
+  }
+}
+

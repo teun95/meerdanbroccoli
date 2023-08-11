@@ -4,7 +4,6 @@ slug: carrot-soup-with-roasted-peppers
 tags: ['rice and pulses', 'soup']
 categories: ["recipe"]
 url: /carrot-soup-with-roasted-peppers
-layout: "recipes"
 recipe:
   - step: 1
     ingredients:
@@ -49,17 +48,18 @@ recipe:
       - 'Stir in the cream and season with salt and pepper.'
       - 'Return the soup on the stove and heat through for another 2 to 3 minutes.'
       - 'Serve the soup with some fresh bread if using.'
+cookingTime: "30 minutes"
+preparationTime: "15 minutes"
+people: 4
 excerpt: "Carrot soup with roasted peppers. A simple soup that you can make with all types of vegetables. "
+top_photo: "/images/carrot-soup-with-roasted-peppers.jpg"
 Conclusion: "Enjoy your meal!"
 ---
-![](/images/carrot-soup-with-roasted-peppers.jpg)
-
+{{< top_photo >}}
 {{< excerpt >}}
 <!--more-->
 
-
-
-
 The addition of roasted peppers makes this delicious soup that little bit more special. And the soup fills well as a main meal thanks to chickpeas. Did you like this? Leave a comment below if you made this recipe, and let me know what you think. Tips and feedback to improve the recipe are always welcome too!
 
+{{< recipe-info >}}
 {{< recipe >}}
