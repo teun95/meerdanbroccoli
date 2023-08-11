@@ -1,0 +1,8 @@
+{{ if .Page.Params.topPhoto }}
+  <p><img src="{{ .Page.Params.topPhoto }}" alt=
+    {{ if .Page.Params.title }}
+      "{{ .Page.Params.title }}"
+    {{ else }}
+      ""
+    {{ end }}></p>
+{{ end }}
