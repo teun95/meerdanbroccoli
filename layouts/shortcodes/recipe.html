@@ -1,0 +1,36 @@
+<article>
+    <div class="three-column-layout">
+      <h2 class="instructions-header">{{ i18n "the_recipe" }}</h2>
+      {{ range .Page.Params.recipe }}
+        <div class="step">
+          <div class="step-number">
+            <div class="circle">{{ .step }}</div>
+          </div>
+          <div class="ingredient-column" {{ if not .ingredients }}style="display: none;"{{ end }}>
+            {{ if .ingredients }}
+              <ul class="no-bullet">
+                {{ range .ingredients }}
+                  <li>
+                    {{ if .quantity }}
+                      <span class="quantity">{{ .quantity }}</span>
+                    {{ else }}
+                      
+                    {{ end }}
+                    <span class="name">{{ .name }}</span>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}
+          </div>
+          <div class="instruction-column" {{ if not .ingredients }}style="width: 66%;"{{ end }}>
+            <ul class="subtle-bullet">
+              {{ range .instructions }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+        <hr>
+      {{ end }}
+    </div>
+  </article>

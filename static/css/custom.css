@@ -5,8 +5,23 @@
 
 body {
   font-size: var(--body-text-size) !important;
+  
 }
 
+
+
+@media only screen and (min-width: 768px) {
+  .recipes-heading h1 {
+    font-size: 70px !important;
+    text-align: center !important;
+
+  }
+}
+
+.instructions-header {
+  text-align:left !important;
+  margin-bottom: 20px !important;
+}
 
 .three-column-layout .step {
   display: flex;
@@ -32,12 +47,11 @@ body {
 
 .ingredient-column {
   width: 33%;
-  padding: 10px;
 }
 
 .instruction-column {
   width: 52%;
-  padding: 10px;
+
 }
 
 ul.no-bullet {
@@ -45,16 +59,36 @@ ul.no-bullet {
   padding-left: 0;
 }
 
+ul.subtle-bullet {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.subtle-bullet li:not(:only-child) {
+  position: relative;
+  padding-left: 15px; /* This should be a bit more than the width of the dash plus the margin */
+}
+
+ul.subtle-bullet li:not(:only-child)::before {
+  content: '-';
+  color: lightgreen;
+  position: absolute;
+  left: 0;
+}
+
+
+
 .quantity {
   display: inline-block;
   width: var(--ingredient-quantity-column-width);
+  min-width: var(--ingredient-quantity-column-width); /* Ensures that space is reserved even if empty */
+  flex: 0 0 auto; /* Prevents shrinking */
+  margin-right: 10px;
 }
 
 .name {
   display: inline-block;
-  margin-left: var(--ingredient-quantity-column-width);
-  margin-right: calc(-1 * var(--ingredient-quantity-column-width) - .2em);
-  min-width: var(--ingredient-quantity-column-width);
+  flex: 1 1 auto; /* Allows growing and shrinking */
 }
 
 
@@ -78,4 +112,8 @@ ul.no-bullet {
   .container {
     width: 1487px !important; /* body width for larger devices */
   }
+}
+
+.excerpt {
+  font-style: italic; /* Make the text italic */
 }

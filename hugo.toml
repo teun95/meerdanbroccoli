@@ -9,3 +9,17 @@ theme = 'beautifulhugo'
 
 [params]
     custom_css = ["css/custom.css"]
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = 'More Than Broccoli'
+    contentDir = 'content/english'
+  [languages.nl]
+    languageName = "Nederlands"
+    weight = 2
+    title = 'Meer Dan Broccoli'
+    contentDir = 'content/dutch'
+
+

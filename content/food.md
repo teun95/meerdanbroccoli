@@ -11,3 +11,11 @@ instructions: |
   2. Dice the onion and garlic.
   ...
 ---
+
+# 1 header
+
+Some text
+
+## 2 header
+
+adfadf
